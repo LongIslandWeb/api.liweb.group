@@ -1,0 +1,1 @@
+This is a nodejs app that integrates with meetup api to pull meetup events and make them available for FullCalendar

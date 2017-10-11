@@ -1,0 +1,23 @@
+{
+  "name": "LIWebAPI",
+  "version": "0.0.1",
+  "description": "api implementation for li web",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "express": "~3.3.4",
+    "express-jwt": "^5.1.0",
+    "jsonwebtoken": "^7.2.1",
+    "meetup-api": "^1.4.10",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.21",
+    "mongoose": "4.8.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "devDependencies": {}
+}
