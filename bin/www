@@ -5,21 +5,15 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('myapp:server');
+var debug = require('debug')('apptest:server');
 var http = require('http');
-
-var envconfig = require('../env.config.json');
 
 /**
  * Get port from environment and store in Express.
  */
 
-console.log("Starting...");
-
-var port = normalizePort(process.env.PORT || envconfig.port || 3000);
-
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-console.log("Listening on " + port);
 
 /**
  * Create HTTP server.
