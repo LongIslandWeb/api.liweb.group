@@ -1,6 +1,6 @@
 var defaultController = require('../server/controllers/defaultController');
 var eventController = require('../server/controllers/eventController');
-
+var config = require('../env.config.json');
 var cors = require('cors');
 
 module.exports = function(app, config) {
@@ -12,7 +12,7 @@ module.exports = function(app, config) {
     userProperty: 'payload'
   });*/
 
-var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://localhost:4000', 'http://localhost:9000'];
+var whitelist = config.cors;
 
 var corsOptions = function (req, callback) {
   var corsOptions;
