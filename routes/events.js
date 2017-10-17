@@ -3,7 +3,7 @@ var router = express.Router();
 var eventController = require('../server/controllers/eventController');
 var cors = require('cors');
 
-var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://localhost:4000', 'http://localhost:9000'];
+var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://www.longisland.codes', 'https://www.longisland.codes', 'http://localhost:4000', 'http://localhost:9000'];
 
 var corsOptions = function (req, callback) {
   var corsOptions;
