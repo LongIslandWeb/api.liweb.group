@@ -7,12 +7,17 @@ var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://ww
 
 var corsOptions = function (req, callback) {
   var corsOptions;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  }else{
-    corsOptions = { origin: false } // disable CORS for this request
-  }
+  // if (whitelist.indexOf(req.header('Origin')) !== -1) {
+  //   corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  // }else{
+  //   corsOptions = { origin: false } // disable CORS for this request
+  // }
+  
+  corsOptions = { origin: true }
+  
   callback(null, corsOptions) // callback expects two parameters: error and options
+
+
 }
 
 router.use(cors(corsOptions));
