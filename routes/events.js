@@ -3,16 +3,21 @@ var router = express.Router();
 var eventController = require('../server/controllers/eventController');
 var cors = require('cors');
 
-var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://localhost:4000', 'http://localhost:9000'];
+var whitelist = ['http://www.liweb.group', 'https://www.liweb.group', 'http://www.longisland.codes', 'https://www.longisland.codes', 'https://longisland.codes', 'http://longisland.codes', 'http://localhost:4000', 'http://localhost:9000'];
 
 var corsOptions = function (req, callback) {
   var corsOptions;
-  if (whitelist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
-  }else{
-    corsOptions = { origin: false } // disable CORS for this request
-  }
+  // if (whitelist.indexOf(req.header('Origin')) !== -1) {
+  //   corsOptions = { origin: true } // reflect (enable) the requested origin in the CORS response
+  // }else{
+  //   corsOptions = { origin: false } // disable CORS for this request
+  // }
+  
+  corsOptions = { origin: true }
+  
   callback(null, corsOptions) // callback expects two parameters: error and options
+
+
 }
 
 router.use(cors(corsOptions));
