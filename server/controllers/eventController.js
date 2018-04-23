@@ -74,5 +74,6 @@ exports.findAllMeetupEventsFullCal = function(req, res) {
   }).then((calList) => {
     res.json(calList);
   });
+  //.catch(next);
 
 }
